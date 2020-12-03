@@ -24,7 +24,6 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip LazerSound;
 
 
-
     Coroutine FireCoroutine;
     float xmin;
     float xmax;
@@ -59,6 +58,7 @@ public class Player : MonoBehaviour
             GameObject explosion = Instantiate(DestroyEfect, transform.position, Quaternion.identity);
             Destroy(explosion, durationofExplosion);
             AudioSource.PlayClipAtPoint(DeathSound, Camera.main.transform.position, deathSoundVolume);
+            FindObjectOfType<Level>().GameOver();
 
 
         }

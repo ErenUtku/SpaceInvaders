@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 9106209888964730039}
   - component: {fileID: 4650751421155209238}
   - component: {fileID: -7995331521082712795}
+  - component: {fileID: 2786751650386522724}
+  - component: {fileID: 438135527993964636}
   m_Layer: 9
   m_Name: Roger
   m_TagString: Untagged
@@ -119,7 +121,9 @@ MonoBehaviour:
     type: 3}
   durationofExplosion: 1
   DeathSound: {fileID: 8300000, guid: 1c05cea6a194d404889a97be1658eeaf, type: 3}
-  deathSound: 0.5
+  deathSoundVolume: 0.5
+  LazerSoundVolume: 0.1
+  LazerSound: {fileID: 8300000, guid: 863acb75d20e2004c8781d537ead0feb, type: 3}
 --- !u!61 &-7995331521082712795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,3 +150,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.93, y: 0.84}
   m_EdgeRadius: 0
+--- !u!50 &2786751650386522724
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8161304173555467312}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &438135527993964636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8161304173555467312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875795615529eb94ab48183bd94fda52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

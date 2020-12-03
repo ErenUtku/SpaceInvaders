@@ -17,6 +17,11 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioClip DeathSound;
     [SerializeField] [Range(0,1)] float deathSoundVolume = 0.5f;
 
+    [Header("Lazer")]
+
+    [SerializeField] [Range(0, 1)] float LazerSoundVolume = 0.5f;
+    [SerializeField] AudioClip LazerSound;
+
     void Start()
     {
         ShootCountDown = Random.Range(minShootCD, maxShootCD);
@@ -44,7 +49,8 @@ public class Enemy : MonoBehaviour
         GameObject laser = Instantiate(Enemylaser, transform.position + (transform.forward * 0.5f), Quaternion.identity) as GameObject;
         /*transform.position + (transform.forward * 2)*/
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0,-laserspeed);
-            
+        AudioSource.PlayClipAtPoint(LazerSound, Camera.main.transform.position, LazerSoundVolume);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
