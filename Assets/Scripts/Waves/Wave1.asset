@@ -17,5 +17,5 @@ MonoBehaviour:
   MovementSpeed: 4
   EnemyPic: {fileID: 8161304173555467312, guid: 875e7e4630ac6514b98cc65e316ec4f2,
     type: 3}
-  numberofEnemies: 1
+  numberofEnemies: 5
   timeBetweenSpawn: 1

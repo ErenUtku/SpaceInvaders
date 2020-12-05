@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8809280325932002412}
   - component: {fileID: 2480538475146477847}
   - component: {fileID: 4231570139745494376}
+  - component: {fileID: -8810475250853509628}
+  - component: {fileID: -3417076866681860071}
   m_Layer: 11
   m_Name: Laser Green Strong
   m_TagString: Untagged
@@ -70,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1050466563
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c89b69d76bbb3374bb2188b7eb18027d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,3 +146,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 200
+--- !u!114 &-8810475250853509628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861452309631577252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5629349be1b646b419acd963e4a5f955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 180
+--- !u!114 &-3417076866681860071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861452309631577252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5629349be1b646b419acd963e4a5f955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1

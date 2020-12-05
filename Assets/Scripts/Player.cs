@@ -59,11 +59,12 @@ public class Player : MonoBehaviour
             Destroy(explosion, durationofExplosion);
             AudioSource.PlayClipAtPoint(DeathSound, Camera.main.transform.position, deathSoundVolume);
             FindObjectOfType<Level>().GameOver();
+            health = 0;
 
 
         }
     }
-
+  
     private void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
@@ -104,6 +105,11 @@ public class Player : MonoBehaviour
         xmax = camera.ViewportToWorldPoint(new Vector3(0.96f, 0, 0)).x;
         ymin = camera.ViewportToWorldPoint(new Vector3(0, 0.06f, 0)).y;
         ymax = camera.ViewportToWorldPoint(new Vector3(0, 0.94f, 0)).y;
+    }
+
+    public float GetHealth()
+    {
+        return health;
     }
 
 }
